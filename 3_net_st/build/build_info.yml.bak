@@ -1,0 +1,5 @@
+west:
+  command: 'C:\Python312\Scripts\west build -b esp32_devkitc/esp32/procpu --pristine
+    -- -DESP_IDF_PATH=C: /esp-idf'
+  topdir: C:\zephyrproject
+  version: 1.3.0

@@ -1,0 +1,63 @@
+cmake:
+  application:
+    configuration-dir: 'C:/zephyrproject/zephyr/samples/basic/3_net_st'
+    source-dir: 'C:/zephyrproject/zephyr/samples/basic/3_net_st'
+  board:
+    name: 'esp32_devkitc'
+    path:
+     - 'C:/zephyrproject/zephyr/boards/espressif/esp32_devkitc'
+    qualifiers: 'esp32/procpu'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - 'C:/zephyrproject/zephyr/dts/bindings'
+    files:
+     - 'C:/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu.dts'
+     - 'C:/zephyrproject/zephyr/samples/basic/3_net_st/socs/esp32_procpu.overlay'
+    include-dirs:
+     - 'C:/zephyrproject/modules/hal/ambiq/dts'
+     - 'C:/zephyrproject/modules/hal/atmel/include'
+     - 'C:/zephyrproject/modules/hal/bouffalolab/include'
+     - 'C:/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - 'C:/zephyrproject/modules/hal/gigadevice/include'
+     - 'C:/zephyrproject/modules/hal/microchip/include'
+     - 'C:/zephyrproject/modules/hal/microchip/dts'
+     - 'C:/zephyrproject/modules/hal/nuvoton/dts'
+     - 'C:/zephyrproject/modules/hal/nxp/dts'
+     - 'C:/zephyrproject/modules/hal/stm32/dts'
+     - 'C:/zephyrproject/modules/hal/ti/dts'
+     - 'C:/zephyrproject/zephyr/include'
+     - 'C:/zephyrproject/zephyr/include/zephyr'
+     - 'C:/zephyrproject/zephyr/dts/common'
+     - 'C:/zephyrproject/zephyr/dts/vendor'
+     - 'C:/zephyrproject/zephyr/dts/rx'
+     - 'C:/zephyrproject/zephyr/dts/x86'
+     - 'C:/zephyrproject/zephyr/dts/xtensa'
+     - 'C:/zephyrproject/zephyr/dts/sparc'
+     - 'C:/zephyrproject/zephyr/dts/riscv'
+     - 'C:/zephyrproject/zephyr/dts/posix'
+     - 'C:/zephyrproject/zephyr/dts/arm64'
+     - 'C:/zephyrproject/zephyr/dts/arm'
+     - 'C:/zephyrproject/zephyr/dts/arc'
+     - 'C:/zephyrproject/zephyr/dts'
+    user-files:
+     - 'C:/zephyrproject/zephyr/samples/basic/3_net_st/socs/esp32_procpu.overlay'
+  kconfig:
+    files:
+     - 'C:/zephyrproject/zephyr/boards/espressif/esp32_devkitc/esp32_devkitc_procpu_defconfig'
+     - 'C:/zephyrproject/zephyr/samples/basic/3_net_st/prj.conf'
+     - 'C:/zephyrproject/zephyr/samples/basic/3_net_st/socs/esp32_procpu.conf'
+    user-files:
+     - 'C:/zephyrproject/zephyr/samples/basic/3_net_st/prj.conf'
+     - 'C:/zephyrproject/zephyr/samples/basic/3_net_st/socs/esp32_procpu.conf'
+  toolchain:
+    name: 'zephyr'
+    path: 'C:/zephyr-sdk-0.16.5'
+  zephyr:
+    version: '4.1.99'
+    zephyr-base: 'C:/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: 'C:\Python312\Scripts\west build -b esp32_devkitc/esp32/procpu --pristine -- -DESP_IDF_PATH=C: /esp-idf'
+  topdir: 'C:\zephyrproject'
+  version: '1.3.0'
