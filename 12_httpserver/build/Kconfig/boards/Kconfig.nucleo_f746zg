@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "C:/zephyrproject/zephyr/boards/st/nucleo_f746zg/Kconfig.nucleo_f746zg"
