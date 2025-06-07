@@ -1,0 +1,4 @@
+west:
+  command: C:\Python312\Scripts\west build -b nucleo_f746zg -p
+  topdir: C:\zephyrproject
+  version: 1.3.0
