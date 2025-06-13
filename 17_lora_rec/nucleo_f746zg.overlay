@@ -1,0 +1,29 @@
+// Gateway overlay for NUCLEO-F746ZG
+/ {
+    aliases {
+        lora0 = &lora_radio;
+    };
+};
+
+&arduino_spi {
+    status = "okay";
+    cs-gpios = <&arduino_header 10 GPIO_ACTIVE_LOW>; // D10
+    
+    lora_radio: lora@0 {
+        compatible = "semtech,sx1276";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+        
+        // Standard Arduino shield connections
+        reset-gpios = <&arduino_header 9 GPIO_ACTIVE_LOW>;    // D9
+        dio-gpios = <&arduino_header 2 GPIO_ACTIVE_HIGH>,     // D2 (DIO0)
+                   <&arduino_header 3 GPIO_ACTIVE_HIGH>,      // D3 (DIO1)
+                   <&arduino_header 4 GPIO_ACTIVE_HIGH>;      // D4 (DIO2)
+        
+        // Power amplifier
+        pa-boost-enable-gpios = <&arduino_header 7 GPIO_ACTIVE_HIGH>; // D7
+        power-amplifier-output = "pa-boost";
+        
+        status = "okay";
+    };
+};
